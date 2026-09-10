@@ -50,6 +50,11 @@ html,body{margin:0;padding:0}
 .flagship-card:hover{background:#F7EDEE;box-shadow:0 8px 20px rgba(167,91,125,.1)}
 .flagship-card:active{background:#F4DDE5;box-shadow:0 4px 12px rgba(167,91,125,.1)}
 @media (max-width:680px){.exp-col{border-top:1px solid #D9D9D9;padding-top:28px}}
+@media (max-width:680px){
+  .entrevistas-arrows{flex-direction:column !important}
+  .entrevistas-arrows .arrow-glyph{transform:rotate(90deg)}
+  .decision2-grid{grid-template-columns:repeat(2,1fr) !important}
+}
 </style>
 </head>
 <body>
@@ -289,10 +294,10 @@ html,body{margin:0;padding:0}
           <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.6vw,22px);letter-spacing:-.02em;color:#525252;background:#F2F2F2;border-radius:10px;padding:14px 18px">Familiaridad digital</div>
         </div>
         <p style="font-size:16px;line-height:1.6;color:#6E6E6E;margin:16px 0 0">Suponía que el problema principal estaría en la baja bancarización, la documentación limitada y la poca familiaridad con productos digitales.<br><br></p>
-      </div><div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 12px; padding: clamp(8px,2vw,40px) 0">
-        
-        <div style="color:#A75B7D;font-size:22px">→</div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867;text-align:center">Entrevistas</div>
-        <div style="color:#A75B7D;font-size:22px">→</div>
+      </div><div class="entrevistas-arrows" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 12px; padding: clamp(8px,2vw,40px) 0">
+
+        <div class="arrow-glyph" style="color:#A75B7D;font-size:22px">→</div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867;text-align:center">Entrevistas</div>
+        <div class="arrow-glyph" style="color:#A75B7D;font-size:22px">→</div>
       </div>
       
       <div>
@@ -518,10 +523,10 @@ html,body{margin:0;padding:0}
       
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px;margin-top:clamp(26px,3vw,40px)">
-      <div style="display: flex; gap: 65px; align-items: flex-start"><div style="box-sizing: border-box; display: block; flex-direction: row; gap: 12px"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px"><div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">08 — Decisión 1</div><h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.4vw,48px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">Diseñar para más de una forma de recibir dinero</h2><p style="font-size: clamp(17px,1.2vw,19px); line-height: 1.68; color: #525252; margin: 0; width:100%;max-width:614px; height: 95px">La investigación no justificaba una experiencia exclusivamente bancaria. Algunos participantes usaban efectivo y sucursales como parte normal de su rutina.</p><p style="font-size: clamp(17px,1.2vw,19px); line-height: 1.68; color: #525252; margin: 0; width:100%;max-width:614px">Por eso el flujo presenta dos caminos de primer nivel: retiro en efectivo y depósito a cuenta bancaria. En lugar de esconder estas opciones en configuraciones separadas, las hice comparables en la misma superficie: cómo recibe la otra persona, cuánto cuesta y cuánto tarda.</p></div><div style="background: #F7EDEE; border-radius: 14px; padding: clamp(22px,3vw,30px); margin-top: clamp(26px,3vw,36px); max-width:614px; width:100%; height: 192px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr)); gap: clamp(28px,4vw,65px); align-items: start"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; max-width:614px"><div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">08 — Decisión 1</div><h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.4vw,48px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">Diseñar para más de una forma de recibir dinero</h2><p style="font-size: clamp(17px,1.2vw,19px); line-height: 1.68; color: #525252; margin: 0; width:100%">La investigación no justificaba una experiencia exclusivamente bancaria. Algunos participantes usaban efectivo y sucursales como parte normal de su rutina.</p><p style="font-size: clamp(17px,1.2vw,19px); line-height: 1.68; color: #525252; margin: 0; width:100%">Por eso el flujo presenta dos caminos de primer nivel: retiro en efectivo y depósito a cuenta bancaria. En lugar de esconder estas opciones en configuraciones separadas, las hice comparables en la misma superficie: cómo recibe la otra persona, cuánto cuesta y cuánto tarda.</p><div style="background: #F7EDEE; border-radius: 14px; padding: clamp(22px,3vw,30px); margin-top: clamp(26px,3vw,36px); width:100%">
       <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8E4867;margin-bottom:12px">Tradeoff</div>
       <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.6;color:#171717;margin:0">Agregar opciones aumenta flexibilidad, pero también carga de decisión. La respuesta no fue eliminar alternativas, sino hacerlas comparables con lenguaje simple.</p>
-    </div></div><div style="aspect-ratio: 9/16; background: url(&quot;img/mockup-decision1-como-recibir.png&quot;) center / contain no-repeat; width:100%;max-width:280px"></div></div>
+    </div></div><div style="aspect-ratio: 9/16; background: url(&quot;img/mockup-decision1-como-recibir.png&quot;) center / contain no-repeat; width:100%;max-width:280px;justify-self:center"></div></div>
       
       
     </div>
@@ -540,7 +545,7 @@ html,body{margin:0;padding:0}
       <p style="font-size:17px;line-height:1.6;color:#CFC6E8;margin:12px 0 0">Para enviar este monto necesitamos algunos datos adicionales. Solo tendrás que hacerlo una vez.</p>
     </div>
     <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:22px 0 0;max-width:720px">El flujo también mantiene visible que el envío permanece guardado durante la revisión.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,150px),1fr)); gap: 14px; margin-top: clamp(26px,3vw,40px)">
+    <div class="decision2-grid" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,150px),1fr)); gap: 14px; margin-top: clamp(26px,3vw,40px)">
       <div style="width:100%;max-width:280px"><div style="aspect-ratio: 790/1584; background: url(&quot;img/mockup-decision2-01-monto.png&quot;) center / contain no-repeat; width:100%;max-width:280px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:8px">01 · Monto</div></div>
 
       <div style="width:100%;max-width:280px"><div style="aspect-ratio: 790/1584; background: url(&quot;img/mockup-decision2-02-identificacion.png&quot;) center / contain no-repeat; width:100%;max-width:280px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:8px">02 · Identificación</div></div>
@@ -627,36 +632,32 @@ html,body{margin:0;padding:0}
     <div style="margin-top:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:22px">
       <div style="border-top:1px solid #D9D9D9;padding-top:24px">
         <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:18px">
-          <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E">Antes</span>
-          <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#6E6E6E">Borradores visibles</span>
+          <span style="display:inline-flex;align-items:baseline;gap:8px"><span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E">Antes</span><span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#6E6E6E">Borradores visibles</span></span>
           <span style="color:#A75B7D;font-size:18px">→</span>
-          <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867">Después</span>
-          <span style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(19px,1.9vw,25px);letter-spacing:-.025em;color:#171717">Autoguardado contextual</span>
+          <span style="display:inline-flex;align-items:baseline;gap:8px"><span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867">Después</span><span style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#171717">Autoguardado contextual</span></span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:14px">
           <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-autoguardado-sketch.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">Sketch</div></div>
           <div><div style="aspect-ratio: 4/3; background: url(&quot;img/captura-de-pantalla-2026-09-09-a-la-s-3--mttx4wif-0jxu.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">Low-fi</div></div>
-          <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-autoguardado-highfi.png&quot;) center / contain no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">High-fi</div></div>
+          <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-autoguardado-highfi.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">High-fi</div></div>
         </div>
         <p style="font-size:17px;line-height:1.6;color:#525252;margin:16px 0 0;max-width:720px">La primera arquitectura colocaba una sección de “Borradores” dentro de Historial. Más tarde simplifiqué el modelo: el sistema conserva el avance y ofrece continuar, sin pedir al usuario que administre una categoría adicional.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; align-items: flex-start">
           <span style="font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #8E4867; flex: none; padding-top: 4px; text-align: left">Por qué cambió</span>
-          <span style="font-size: 17px; line-height: 1.6; color: #171717; font-weight: 500; flex: 1 1 340px; width:100%;max-width:889px; height: 24px">Guardar progreso debía reducir ansiedad, no crear otra tarea de organización.</span>
+          <span style="font-size: 17px; line-height: 1.6; color: #171717; font-weight: 500; flex: 1 1 340px; width:100%;max-width:889px">Guardar progreso debía reducir ansiedad, no crear otra tarea de organización.</span>
         </div>
       </div>
       
       <div style="border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;padding:24px 0">
         <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:18px">
-          <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E">Antes</span>
-          <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#6E6E6E">Verificación binaria</span>
+          <span style="display:inline-flex;align-items:baseline;gap:8px"><span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E">Antes</span><span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#6E6E6E">Verificación binaria</span></span>
           <span style="color:#A75B7D;font-size:18px">→</span>
-          <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867">Después</span>
-          <span style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(19px,1.9vw,25px);letter-spacing:-.025em;color:#171717">Verificación progresiva</span>
+          <span style="display:inline-flex;align-items:baseline;gap:8px"><span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8E4867">Después</span><span style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.025em;color:#171717">Verificación progresiva</span></span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:14px">
           <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-iteracion1-sketch.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">Sketch</div></div>
           <div><div style="aspect-ratio: 4/3; background: url(&quot;img/captura-de-pantalla-2026-09-09-a-la-s-3--mttxg1qg-2bgi.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">Low-fi</div></div>
-          <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-iteracion1-highfi.png&quot;) center / contain no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">High-fi</div></div>
+          <div><div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-iteracion1-highfi.png&quot;) center / cover no-repeat; border-radius: 10px"></div><div style="font-size:12.5px;color:#6E6E6E;margin-top:7px">High-fi</div></div>
         </div>
         <p style="font-size:17px;line-height:1.6;color:#525252;margin:16px 0 0;max-width:720px">Los primeros user flows trataban la verificación como un estado simple: verificado / no verificado. La solución evolucionó hacia capas de información que aparecen de acuerdo con el escenario.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;max-width:720px">
