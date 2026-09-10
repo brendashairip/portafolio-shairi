@@ -55,6 +55,20 @@ html,body{margin:0;padding:0}
   .entrevistas-arrows .arrow-glyph{transform:rotate(90deg)}
   .decision2-grid{grid-template-columns:repeat(2,1fr) !important}
 }
+/* --- SANAVI case (theme local) --- */
+.sv-back:hover{color:#E9EEF2 !important}
+/* Media slots: reciben screenshots reales (reemplazar background por url). Sin marca de "pendiente". */
+.sv-slot{position:relative;display:flex;align-items:flex-end;width:100%;background:#0F141A;border:1px solid rgba(233,238,242,.10);overflow:hidden}
+.sv-slot::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 100% 0,rgba(205,253,123,.10),transparent 55%)}
+.sv-slot::after{content:"";position:absolute;top:14px;left:14px;width:22px;height:5px;border-radius:3px;background:#CDFD7B;opacity:.85}
+.sv-slot>span{position:relative;font-size:12.5px;font-weight:500;letter-spacing:.04em;color:#95999D;padding:14px 16px}
+.sv-slot--light{background:#F2F2F2;border-color:#E0E0E0}
+.sv-slot--light::before{background:radial-gradient(120% 90% at 100% 0,rgba(23,25,32,.05),transparent 55%)}
+.sv-slot--light::after{background:#CBD3D9;opacity:1}
+.sv-slot--light>span{color:#8A9299}
+@media (max-width:680px){
+  .sv-2col{grid-template-columns:1fr !important}
+}
 </style>
 </head>
 <body>
@@ -129,14 +143,14 @@ html,body{margin:0;padding:0}
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(26px,4vw,52px);margin-top:clamp(52px,7vw,96px);align-items:center">
+    <div class="flagship-card" data-go="SANAVI" role="button" tabindex="0" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(26px,4vw,52px);margin-top:clamp(52px,7vw,96px);align-items:center;padding:clamp(20px,3vw,32px)">
         <div style="aspect-ratio: 4/3; background: url(&quot;img/mockup-page-3-mttzqgi3-tyzw.png&quot;) center / cover no-repeat; border-radius: 14px; padding: 14px 16px"></div>
         <div>
           <div style="display:flex;align-items:baseline;gap:12px"><span style="font-size:13px;color:#6E6E6E;font-weight:500">02</span><span style="font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E">Producto profesional · JTECH</span></div>
           <h3 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(24px,2.4vw,34px);line-height:1.1;letter-spacing:-.028em;margin:12px 0 0">SANAVI</h3>
           <p style="font-size:17.5px;line-height:1.6;color:#525252;margin:12px 0 0;max-width:480px">Producto de salud digital con app mobile y plataforma web. Trabajé la arquitectura de interfaz y el sistema de diseño que sostiene la consistencia de un producto que llegó a cerca de 300 pantallas entre ambas plataformas, dentro del equipo y en coordinación con desarrollo y stakeholders.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:#6E6E6E"><span>UI · Design System · Responsive</span><span>Web + mobile</span><span>2024</span></div>
-          
+          <div style="display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:500;color:#171717;border-bottom:1.5px solid #171717;padding-bottom:4px;margin-top:20px">Ver case study <span>→</span></div>
         </div>
       </div>
 
@@ -767,7 +781,7 @@ html,body{margin:0;padding:0}
     <div style="max-width:1280px;margin:0 auto;padding:clamp(36px,5vw,60px) clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;align-items:end">
       <div>
         <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E;margin-bottom:12px">Siguiente proyecto</div>
-        <div data-go="Inicio" role="button" tabindex="0" style="cursor:pointer;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);letter-spacing:-.03em;color:#171717;transition:color .18s ease" class="hv9">SANAVI →</div>
+        <div data-go="SANAVI" role="button" tabindex="0" style="cursor:pointer;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);letter-spacing:-.03em;color:#171717;transition:color .18s ease" class="hv9">SANAVI →</div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:16px 20px">
         <div data-go="Contacto" role="button" tabindex="0" style="cursor:pointer;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 28px;background:#171717;color:#FAFAFA;border-radius:8px;font-size:16.5px;font-weight:500;transition:background .18s ease" class="hv10">Contactar <span>→</span></div>
@@ -775,6 +789,258 @@ html,body{margin:0;padding:0}
       </div>
     </div>
   </div>
+</section>
+<!-- ============================================================
+     CASE STUDY 02 · SANAVI  (UI / Product Execution)
+     Theme local: bg #131920 · surface #2C333C · text #E9EEF2 ·
+     muted #95999D · accent #CDFD7B. Ritmo dark→light→dark→light.
+     SLOTS de screenshot real marcados con  SANAVI-SLOT  — reemplazar
+     el background del div por url("img/sanavi-*.png") cuando lleguen.
+     ============================================================ -->
+<section class="view" data-view="SANAVI" hidden>
+<div>
+  <!-- HERO (dark) -->
+  <div style="background:#131920;color:#E9EEF2">
+    <div style="max-width:1280px;margin:0 auto;padding:22px clamp(20px,5vw,64px) 0">
+      <div data-go="Inicio" role="button" tabindex="0" style="cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:#95999D;transition:color .18s ease" class="sv-back"><span>←</span> Volver a Inicio</div>
+    </div>
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(28px,4vw,52px) clamp(20px,5vw,64px) clamp(44px,6vw,72px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:clamp(18px,3vw,28px)">
+        <span style="font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#131920;background:#CDFD7B;padding:6px 12px;border-radius:6px">Case study 02</span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#CDFD7B">Producto profesional · JTECH</span>
+      </div>
+      <h1 style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(38px,6vw,80px);line-height:1.02;letter-spacing:-.035em;margin:0;max-width:1000px;color:#E9EEF2;text-wrap:pretty">Diseñar consistencia para un e-commerce que crecía en web y mobile</h1>
+      <p style="font-size:clamp(17px,1.35vw,21px);line-height:1.6;color:#B7C0C8;margin:clamp(22px,3vw,32px) 0 0;max-width:760px;text-wrap:pretty">SANAVI es un e-commerce desarrollado en JTECH. A medida que el producto creció en pantallas, flujos y estados, el reto dejó de ser resolver interfaces aisladas y pasó a ser mantener una experiencia consistente y escalable entre web, mobile y los distintos recorridos del producto.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:18px 28px;margin-top:clamp(28px,4vw,40px);padding:20px 0;border-top:1px solid rgba(233,238,242,.14);border-bottom:1px solid rgba(233,238,242,.14)">
+        <div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#CDFD7B">Rol</div><div style="font-size:15px;line-height:1.45;margin-top:6px;color:#E9EEF2">UX/UI Designer</div></div>
+        <div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#CDFD7B">Equipo</div><div style="font-size:15px;line-height:1.45;margin-top:6px;color:#E9EEF2">Diseño · Producto · Desarrollo</div></div>
+        <div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#CDFD7B">Plataformas</div><div style="font-size:15px;line-height:1.45;margin-top:6px;color:#E9EEF2">Web + Mobile</div></div>
+        <div><div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#CDFD7B">Enfoque</div><div style="font-size:15px;line-height:1.45;margin-top:6px;color:#E9EEF2">UI · Design System · Responsive · Handoff</div></div>
+      </div>
+      <!-- Hero visual: composición 1 web + 2 mobile · SANAVI-SLOT -->
+      <div class="sv-2col" style="display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:16px;margin-top:clamp(32px,4vw,48px);align-items:stretch">
+        <div class="sv-slot" style="aspect-ratio:16/10;border-radius:16px"><span>Web · home / catálogo</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="sv-slot" style="aspect-ratio:9/16;border-radius:16px"><span>Mobile · detalle</span></div>
+          <div class="sv-slot" style="aspect-ratio:9/16;border-radius:16px"><span>Mobile · carrito</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 · EL RETO (light) -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(20px,5vw,64px) 0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">01 — El reto</div>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">Diseñar pantallas no era suficiente</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,44px);margin-top:clamp(28px,4vw,40px);align-items:center">
+      <div style="max-width:720px;display:flex;flex-direction:column;gap:18px">
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">El producto contemplaba múltiples recorridos, estados y contextos de uso, y continuaba creciendo en funcionalidades entre web y mobile.</p>
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Resolver cada vista como una pieza independiente habría multiplicado inconsistencias y decisiones repetidas. El reto fue construir una base que permitiera diseñar nuevas experiencias sin volver a resolver los mismos patrones en cada pantalla.</p>
+      </div>
+      <div style="background:#131920;border-radius:18px;padding:clamp(28px,4vw,40px);color:#E9EEF2">
+        <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(56px,8vw,104px);line-height:.9;letter-spacing:-.04em;color:#CDFD7B">≈300</div>
+        <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,22px);line-height:1.25;letter-spacing:-.02em;margin-top:14px">pantallas en el producto completo</div>
+        <div style="font-size:14.5px;line-height:1.5;color:#95999D;margin-top:12px">Web + mobile · trabajo realizado en equipo. La cifra describe la escala del producto, no una cantidad diseñada de forma individual.</div>
+      </div>
+    </div>
+    <!-- Overview de familias de pantalla · SANAVI-SLOT (overview SVG/screens) -->
+    <div class="sv-slot" style="aspect-ratio:16/6;border-radius:16px;margin-top:clamp(24px,3vw,36px)"><span>Overview del alcance · familias de pantalla</span></div>
+    <div style="font-size:14px;color:#6E6E6E;margin-top:12px">Vista general del producto entre web y mobile.</div>
+  </div>
+
+  <!-- 02 · DE REQUERIMIENTOS A INTERFAZ (light) -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(20px,5vw,64px) 0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">02 — Proceso</div>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:860px;text-wrap:pretty">Convertir requerimientos en una estructura que desarrollo pudiera construir</h2>
+    <div style="max-width:720px;margin-top:22px;display:flex;flex-direction:column;gap:18px">
+      <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Los proyectos partían de requerimientos y tickets definidos por producto y stakeholders. A partir de ahí, mi trabajo consistía en convertir esa información en una experiencia concreta: analizar referencias, organizar arquitectura y flujos, diseñar wireframes, llevarlos a alta fidelidad y documentar comportamientos para desarrollo.</p>
+      <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">El proceso no siempre era lineal. Durante implementación surgían dudas técnicas o cambios de requerimiento, por lo que diseño y desarrollo manteníamos comunicación para ajustar la solución.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:clamp(30px,4vw,44px)">
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#F2F2F2;color:#525252;border-radius:8px;padding:12px 18px">Requerimiento</span><span style="color:#95999D;font-size:18px">→</span>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#F2F2F2;color:#525252;border-radius:8px;padding:12px 18px">Flow</span><span style="color:#95999D;font-size:18px">→</span>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#F2F2F2;color:#525252;border-radius:8px;padding:12px 18px">Wireframe</span><span style="color:#95999D;font-size:18px">→</span>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#131920;color:#CDFD7B;border-radius:8px;padding:12px 18px">High-fi</span><span style="color:#95999D;font-size:18px">→</span>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#F2F2F2;color:#525252;border-radius:8px;padding:12px 18px">Handoff</span><span style="color:#95999D;font-size:18px">→</span>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em;background:#F2F2F2;color:#525252;border-radius:8px;padding:12px 18px">QA</span>
+    </div>
+    <!-- Un ejemplo: wireframe → high-fi · SANAVI-SLOT -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin-top:clamp(28px,4vw,40px);align-items:center">
+      <div style="display:flex;flex-direction:column;gap:12px"><div class="sv-slot sv-slot--light" style="aspect-ratio:4/3;border-radius:14px"><span>Wireframe</span></div><span style="font-size:12.5px;color:#6E6E6E">Wireframe</span></div>
+      <div style="display:flex;align-items:center;justify-content:center"><span style="color:#95999D;font-size:22px">→</span></div>
+      <div style="display:flex;flex-direction:column;gap:12px"><div class="sv-slot" style="aspect-ratio:4/3;border-radius:14px"><span>High-fi</span></div><span style="font-size:12.5px;color:#6E6E6E">High-fi</span></div>
+    </div>
+    <div style="font-size:14px;color:#6E6E6E;margin-top:12px">Un mismo módulo, de la estructura a la interfaz final.</div>
+  </div>
+
+  <!-- 03 · DESIGN SYSTEM (dark) — sección protagonista -->
+  <div style="background:#131920;color:#E9EEF2;margin-top:clamp(52px,7vw,96px)">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(20px,5vw,64px)">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#CDFD7B">03 — Design System</div>
+      <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.8vw,54px);line-height:1.05;letter-spacing:-.032em;margin:16px 0 0;max-width:860px;color:#E9EEF2;text-wrap:pretty">Un sistema para no diseñar lo mismo dos veces</h2>
+      <div style="max-width:760px;margin-top:22px;display:flex;flex-direction:column;gap:18px">
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.65;color:#B7C0C8;margin:0">A medida que SANAVI crecía, mantener consistencia requería algo más que repetir estilos manualmente.</p>
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.65;color:#B7C0C8;margin:0">Construí y evolucioné componentes para establecer patrones reutilizables de color, tipografía, iconografía, inputs, botones, cards y estados interactivos. El sistema utilizaba Auto Layout, componentes y variantes para adaptarse a distintos contenidos y contextos sin crear una solución independiente para cada pantalla.</p>
+      </div>
+
+      <!-- DS panel en vivo -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:clamp(32px,4vw,48px)">
+        <!-- Color -->
+        <div style="background:#2C333C;border-radius:16px;padding:clamp(22px,2.6vw,28px)">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin-bottom:16px">Color</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:10px">
+            <div><div style="height:52px;background:#131920;border:1px solid rgba(233,238,242,.18);border-radius:8px"></div><div style="font-size:11px;color:#95999D;margin-top:6px">BG · #131920</div></div>
+            <div><div style="height:52px;background:#2C333C;border:1px solid rgba(233,238,242,.18);border-radius:8px"></div><div style="font-size:11px;color:#95999D;margin-top:6px">Surface · #2C333C</div></div>
+            <div><div style="height:52px;background:#E9EEF2;border-radius:8px"></div><div style="font-size:11px;color:#95999D;margin-top:6px">Text · #E9EEF2</div></div>
+            <div><div style="height:52px;background:#95999D;border-radius:8px"></div><div style="font-size:11px;color:#95999D;margin-top:6px">Muted · #95999D</div></div>
+            <div><div style="height:52px;background:#CDFD7B;border-radius:8px"></div><div style="font-size:11px;color:#95999D;margin-top:6px">Accent · #CDFD7B</div></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin:20px 0 12px">Estados</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#E9EEF2;background:#1B222B;border-radius:20px;padding:7px 12px"><span style="width:9px;height:9px;border-radius:50%;background:#1B9229"></span>Success</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#E9EEF2;background:#1B222B;border-radius:20px;padding:7px 12px"><span style="width:9px;height:9px;border-radius:50%;background:#ED3636"></span>Error</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#E9EEF2;background:#1B222B;border-radius:20px;padding:7px 12px"><span style="width:9px;height:9px;border-radius:50%;background:#D28202"></span>Warning</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#E9EEF2;background:#1B222B;border-radius:20px;padding:7px 12px"><span style="width:9px;height:9px;border-radius:50%;background:#3251FF"></span>Info</span>
+          </div>
+        </div>
+        <!-- Tipografía -->
+        <div style="background:#2C333C;border-radius:16px;padding:clamp(22px,2.6vw,28px)">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin-bottom:16px">Tipografía</div>
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(52px,6vw,76px);line-height:1;letter-spacing:-.035em;color:#E9EEF2">Aa</div>
+          <div style="display:inline-block;height:4px;width:64px;background:#CDFD7B;border-radius:2px;margin-top:14px"></div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:26px;letter-spacing:-.03em;color:#E9EEF2">Display / Título</div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em;color:#E9EEF2">Subtítulo · 600</div>
+            <div style="font-size:16px;line-height:1.6;color:#B7C0C8">Cuerpo de texto para descripciones y contenido de producto, con medida legible y jerarquía estable.</div>
+            <div style="font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#95999D">Label · metadata</div>
+          </div>
+        </div>
+        <!-- Botones e inputs -->
+        <div style="background:#2C333C;border-radius:16px;padding:clamp(22px,2.6vw,28px)">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin-bottom:16px">Botones</div>
+          <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+            <div style="display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 24px;background:#CDFD7B;color:#131920;border-radius:10px;font-size:15.5px;font-weight:600">Acción primaria</div>
+            <div style="display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 24px;background:transparent;color:#CDFD7B;border:1.5px solid #CDFD7B;border-radius:10px;font-size:15.5px;font-weight:600">Secundario</div>
+            <div style="display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 24px;background:#1B222B;color:#95999D;border-radius:10px;font-size:15.5px;font-weight:600">Deshabilitado</div>
+          </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin:22px 0 12px">Inputs</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div>
+              <div style="font-size:12.5px;color:#95999D;margin-bottom:6px">Correo electrónico</div>
+              <div style="background:#1B222B;border:1px solid rgba(233,238,242,.16);border-radius:10px;padding:12px 14px;font-size:15px;color:#E9EEF2">hola@sanavi.com</div>
+            </div>
+            <div>
+              <div style="font-size:12.5px;color:#95999D;margin-bottom:6px">Contraseña · foco</div>
+              <div style="background:#1B222B;border:1.5px solid #CDFD7B;border-radius:10px;padding:12px 14px;font-size:15px;color:#E9EEF2">••••••••</div>
+            </div>
+          </div>
+        </div>
+        <!-- Navegación + card componente -->
+        <div style="background:#2C333C;border-radius:16px;padding:clamp(22px,2.6vw,28px)">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin-bottom:16px">Navegación</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:#131920;border-radius:12px;padding:12px 16px">
+            <span style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.02em;color:#CDFD7B">SANAVI</span>
+            <span style="display:flex;gap:14px;font-size:13px;color:#95999D"><span style="color:#E9EEF2">Inicio</span><span>Tienda</span><span>Planes</span></span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#CDFD7B;color:#131920;border-radius:9px;font-size:15px">🛒</span>
+          </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin:22px 0 12px">Card · componente</div>
+          <div style="background:#131920;border:1px solid rgba(233,238,242,.10);border-radius:14px;overflow:hidden;max-width:220px">
+            <div class="sv-slot" style="aspect-ratio:4/3;border-radius:0"><span>Producto</span></div>
+            <div style="padding:14px 16px">
+              <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:16px;letter-spacing:-.01em;color:#E9EEF2">Proteína · 1 kg</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+                <span style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:18px;color:#CDFD7B">$—</span>
+                <span style="display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 16px;background:#CDFD7B;color:#131920;border-radius:9px;font-size:13.5px;font-weight:600">Agregar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sistema → aplicado en producto -->
+      <div style="margin-top:clamp(36px,5vw,60px)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,3vw,28px)">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#95999D">Sistema</span>
+          <span style="color:#CDFD7B;font-size:18px">↓</span>
+          <span style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#CDFD7B">Aplicado en producto</span>
+        </div>
+        <!-- SANAVI-SLOT: 2-3 pantallas reales que usan el sistema -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px"><div class="sv-slot" style="aspect-ratio:9/16;border-radius:14px"><span>Catálogo</span></div><span style="font-size:12.5px;color:#95999D">Catálogo</span></div>
+          <div style="display:flex;flex-direction:column;gap:10px"><div class="sv-slot" style="aspect-ratio:9/16;border-radius:14px"><span>Detalle de producto</span></div><span style="font-size:12.5px;color:#95999D">Detalle de producto</span></div>
+          <div style="display:flex;flex-direction:column;gap:10px"><div class="sv-slot" style="aspect-ratio:9/16;border-radius:14px"><span>Carrito</span></div><span style="font-size:12.5px;color:#95999D">Carrito</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 · RESPONSIVE (light) -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(20px,5vw,64px) 0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">04 — Responsive</div>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">Una interfaz, distintos contextos</h2>
+    <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(18px,1.9vw,24px);line-height:1.3;letter-spacing:-.02em;color:#6E6E6E;margin-top:14px;max-width:720px">Responsive no significaba encoger desktop.</div>
+    <div style="max-width:720px;margin-top:22px;display:flex;flex-direction:column;gap:18px">
+      <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Diseñar para web y mobile implicó reorganizar jerarquías, navegación y densidad de información según el espacio disponible.</p>
+      <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Los componentes y layouts debían conservar el mismo lenguaje visual mientras cambiaban su estructura para funcionar correctamente en cada breakpoint.</p>
+    </div>
+    <!-- Misma funcionalidad: desktop → mobile · SANAVI-SLOT -->
+    <div class="sv-2col" style="display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:16px;margin-top:clamp(28px,4vw,44px);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:12px"><div class="sv-slot" style="aspect-ratio:16/10;border-radius:16px"><span>Desktop</span></div><span style="font-size:12.5px;color:#6E6E6E">Desktop</span></div>
+      <div style="display:flex;flex-direction:column;gap:12px"><div class="sv-slot" style="aspect-ratio:9/16;border-radius:16px"><span>Mobile</span></div><span style="font-size:12.5px;color:#6E6E6E">Mobile</span></div>
+    </div>
+    <div style="font-size:14px;color:#6E6E6E;margin-top:12px">Mismo sistema, distinta composición.</div>
+  </div>
+
+  <!-- 05 · HANDOFF (light) -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(20px,5vw,64px) 0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">05 — Handoff</div>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">El trabajo no terminaba al entregar Figma</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(24px,3vw,44px);margin-top:22px;align-items:start">
+      <div style="max-width:640px;display:flex;flex-direction:column;gap:18px">
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Los diseños se entregaban a desarrollo acompañados de estados, flujos y notas sobre comportamiento responsive.</p>
+        <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.68;color:#525252;margin:0">Durante la implementación atendía dudas y revisaba pantallas para detectar diferencias entre lo diseñado y lo construido, ajustando detalles cuando las restricciones técnicas lo requerían.</p>
+      </div>
+      <!-- Especificación/Figma  vs  implementado · SANAVI-SLOT -->
+      <div class="sv-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:10px"><div class="sv-slot sv-slot--light" style="aspect-ratio:3/4;border-radius:14px"><span>Figma · specs</span></div><span style="font-size:12.5px;color:#6E6E6E">Diseño + anotaciones</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div class="sv-slot" style="aspect-ratio:3/4;border-radius:14px"><span>Implementado</span></div><span style="font-size:12.5px;color:#6E6E6E">Pantalla construida</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 · RESULTADO (light) -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(20px,5vw,64px) 0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E">06 — Resultado</div>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.06;letter-spacing:-.032em;margin:16px 0 0;max-width:820px;text-wrap:pretty">De pantallas individuales a un producto mantenible</h2>
+    <p style="font-size:clamp(17px,1.2vw,19px);line-height:1.65;color:#525252;margin:20px 0 0;max-width:760px">SANAVI evolucionó hasta convertirse en un producto de gran escala entre web y mobile y llegó a desarrollo/producción. Mi contribución se centró en convertir requerimientos en interfaces, construir y mantener patrones reutilizables, adaptar la experiencia entre dispositivos y entregar especificaciones suficientemente claras para que diseño y desarrollo trabajaran sobre un mismo sistema.</p>
+    <!-- Composición final: web + mobile + detalle + sistema · SANAVI-SLOT -->
+    <div class="sv-2col" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:clamp(30px,4vw,44px)">
+      <div class="sv-slot" style="aspect-ratio:16/10;border-radius:16px;grid-column:1 / -1"><span>Web · vista principal</span></div>
+      <div class="sv-slot" style="aspect-ratio:9/16;border-radius:16px"><span>Mobile</span></div>
+      <div class="sv-slot" style="aspect-ratio:9/16;border-radius:16px"><span>Detalle UI</span></div>
+    </div>
+  </div>
+
+  <!-- REFLEXIÓN -->
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px)">
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E;margin-bottom:24px">Reflexión</div>
+    <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(28px,4vw,56px);line-height:1.1;letter-spacing:-.033em;color:#171717;max-width:1000px;text-wrap:pretty">SANAVI me enseñó que escalar una interfaz no consiste en producir más pantallas, sino en tomar menos decisiones repetidas.</div>
+  </div>
+
+  <!-- NEXT PROJECT -->
+  <div style="border-top:1px solid #D9D9D9">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(36px,5vw,60px) clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;align-items:end">
+      <div>
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E;margin-bottom:12px">Siguiente proyecto</div>
+        <div data-go="Case study" role="button" tabindex="0" style="cursor:pointer;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);letter-spacing:-.03em;color:#171717;transition:color .18s ease" class="hv9">Diseñar confianza →</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px 20px">
+        <div data-go="Contacto" role="button" tabindex="0" style="cursor:pointer;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 28px;background:#171717;color:#FAFAFA;border-radius:8px;font-size:16.5px;font-weight:500;transition:background .18s ease" class="hv10">Contactar <span>→</span></div>
+        <div role="button" tabindex="0" style="cursor:pointer;display:inline-flex;align-items:center;height:52px;gap:8px;font-size:16.5px;font-weight:500;color:#171717;border-bottom:1.5px solid #171717;transition:color .18s ease,border-color .18s ease" class="hv11">Descargar CV <span>↗</span></div>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 <section class="view" data-view="Sobre mí" hidden>
 <div>
@@ -1011,7 +1277,7 @@ html,body{margin:0;padding:0}
 
 <script>
 (function(){
-  var pages={'Inicio':'inicio','Case study':'case','Sobre mí':'sobre','Contacto':'contacto','Sistema':'sistema'};
+  var pages={'Inicio':'inicio','Case study':'case','SANAVI':'sanavi','Sobre mí':'sobre','Contacto':'contacto','Sistema':'sistema'};
   var rev={}; for(var k in pages) rev[pages[k]]=k;
   var views=document.querySelectorAll('.view');
   function pageFromHash(){
@@ -1021,6 +1287,7 @@ html,body{margin:0;padding:0}
   function crumbFor(p){
     if(p==='Inicio') return '';
     if(p==='Case study') return 'Trabajo · Diseñar confianza';
+    if(p==='SANAVI') return 'Trabajo · SANAVI';
     return p;
   }
   var atWork=false;
@@ -1045,7 +1312,7 @@ html,body{margin:0;padding:0}
     var work=document.querySelector('[data-nav="work"]');
     if(p==='Sobre mí') about.classList.add('active');
     if(p==='Contacto') contact.classList.add('active');
-    if(p==='Case study' || (p==='Inicio' && atWork)) work.classList.add('active');
+    if(p==='Case study' || p==='SANAVI' || (p==='Inicio' && atWork)) work.classList.add('active');
   }
   function go(p){
     if(pages[p]===undefined) p='Inicio';
