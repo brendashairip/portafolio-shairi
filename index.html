@@ -46,6 +46,9 @@ html,body{margin:0;padding:0}
 .hv14:hover{background:#000 !important}
 .hv15:hover{color:#A75B7D !important;border-color:#A75B7D !important}
 .hv16:hover{color:#171717 !important;border-color:#171717 !important}
+.flagship-card{cursor:pointer;border-radius:20px;transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
+.flagship-card:hover{background:#F7EDEE;transform:translateY(-3px);box-shadow:0 14px 32px rgba(167,91,125,.14)}
+.flagship-card:active{background:#F4DDE5;transform:translateY(-1px);box-shadow:0 6px 16px rgba(167,91,125,.12)}
 </style>
 </head>
 <body>
@@ -92,7 +95,7 @@ html,body{margin:0;padding:0}
     </div>
 
     <div style="padding-top:clamp(32px,4vw,52px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
+      <div class="flagship-card" data-go="Case study" role="button" tabindex="0" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,4vw,56px);align-items:start;padding:clamp(20px,3vw,32px)">
         <div>
           <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px">
             <span style="font-size:13px;color:#6E6E6E;font-weight:500">01</span>
@@ -154,16 +157,16 @@ html,body{margin:0;padding:0}
       </div>
       <div>
         <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6E6E6E;margin-bottom:20px">Experiencia</div>
-        <div style="display:flex;flex-direction:column">
-          <div style="padding:18px 0;border-top:1px solid #D9D9D9;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
             <div><div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em">JTECH</div><div style="font-size:15px;color:#525252;margin-top:4px">UI · Design Systems · Responsive — proyectos web/mobile (SANAVI, MAPLU)</div></div>
             <div style="font-size:14px;color:#6E6E6E">~2 años</div>
           </div>
-          <div style="padding:18px 0;border-top:1px solid #D9D9D9;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
+          <div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
             <div><div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em">Proyecto personal — remesas USA → México</div><div style="font-size:15px;color:#525252;margin-top:4px">UX Research · UX/UI · Product Design, end-to-end</div></div>
             <div style="font-size:14px;color:#6E6E6E">1–2 meses</div>
           </div>
-          <div style="padding:18px 0;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
+          <div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:baseline">
             <div><div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em">Formación</div><div style="font-size:15px;color:#525252;margin-top:4px">Bootcamp UX/UI en Coderhouse · Lic. en Comercio y Aduanas</div></div>
           </div>
         </div>
