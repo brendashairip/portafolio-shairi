@@ -68,12 +68,6 @@ html,body{margin:0;padding:0}
 .sv-slot--light>span{color:#8A9299}
 .sv-phone{width:100%;aspect-ratio:9/20;background-position:center top;background-repeat:no-repeat;background-size:cover;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.28)}
 @media (max-width:680px){
-  .sv-dsrow{flex-direction:column;height:auto !important;gap:24px !important}
-  .sv-dsmenu{flex:none !important;width:clamp(120px,38vw,150px);aspect-ratio:190/614;height:auto}
-  .sv-dscomp{width:100%}
-  .sv-dsgrid{height:clamp(380px,120vw,560px)}
-}
-@media (max-width:680px){
   .sv-2col{grid-template-columns:1fr !important}
 }
 </style>
@@ -945,24 +939,14 @@ html,body{margin:0;padding:0}
             </div>
           </div>
         </div>
-        <!-- Navegación (menú web vertical) + componentes, misma altura -->
+        <!-- Componentes en producto (ancho completo) -->
         <div style="grid-column:1 / -1;background:#2C333C;border-radius:16px;padding:clamp(22px,2.6vw,28px)">
-          <div class="sv-dsrow" style="display:flex;gap:clamp(22px,3.5vw,44px);align-items:stretch;height:clamp(400px,46vw,560px)">
-            <!-- Navegación -->
-            <div class="sv-dsnav" style="display:flex;flex-direction:column;gap:12px;flex:none;align-items:flex-start">
-              <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D">Navegación</div>
-              <div class="sv-dsmenu" style="flex:1;min-height:0;aspect-ratio:190/614;background:#131920 url(&quot;img/sanavi-webmenu.png&quot;) center / cover no-repeat;border:1px solid rgba(233,238,242,.10);border-radius:12px" role="img" aria-label="Menú web vertical"></div>
-            </div>
-            <!-- Componentes en producto (2x2, abarca toda la sección) -->
-            <div class="sv-dscomp" style="display:flex;flex-direction:column;gap:12px;flex:1 1 auto;min-width:0">
-              <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D">Componentes en producto</div>
-              <div class="sv-dsgrid" style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(16px,2vw,26px);min-height:0">
-                <div style="background:#1B222B url(&quot;img/sanavi-comp-cards.png&quot;) center / cover no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:10px"></div>
-                <div style="background:#1B222B url(&quot;img/sanavi-comp-store.png&quot;) center top / cover no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:10px"></div>
-                <div style="background:#1B222B url(&quot;img/sanavi-comp-tracking.png&quot;) center top / cover no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:10px"></div>
-                <div style="background:#1B222B url(&quot;img/sanavi-comp-payment.png&quot;) center / cover no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:10px"></div>
-              </div>
-            </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#95999D;margin-bottom:16px">Componentes en producto</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px">
+            <div style="aspect-ratio:4/3;background:#1B222B url(&quot;img/sanavi-comp-cards.png&quot;) center / contain no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:12px"></div>
+            <div style="aspect-ratio:4/3;background:#1B222B url(&quot;img/sanavi-comp-store.png&quot;) center / contain no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:12px"></div>
+            <div style="aspect-ratio:4/3;background:#1B222B url(&quot;img/sanavi-comp-tracking.png&quot;) center / contain no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:12px"></div>
+            <div style="aspect-ratio:4/3;background:#1B222B url(&quot;img/sanavi-comp-payment.png&quot;) center / cover no-repeat;border:1px solid rgba(233,238,242,.08);border-radius:12px"></div>
           </div>
         </div>
       </div>
